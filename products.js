@@ -1,0 +1,48 @@
+export default [
+  {
+    name: "Gabinete",
+    path: "/shop/gabinete",
+    description: "",
+    price: "129.99",
+    prefix: "$",
+    image: "beige-sofa.jpg",
+    id: "0",
+  },
+  {
+    name: "Wooden Bed",
+    path: "/shop/wooden-bed",
+    description: "",
+    price: "269.99",
+    prefix: "$",
+    image: "wooden-bed.jpg",
+    id: "1",
+  },
+  {
+    name: "White Wooden Cabinet",
+    path: "/shop/white-wooden-cabinet",
+    description: "",
+    price: "87.98",
+    prefix: "$",
+    image: "white-wooden-cabinet.jpg",
+    id: "2",
+  },
+  {
+    name: "cat",
+    path: "/shop/cat",
+    description: "cat",
+    price: "999.99",
+    prefix: "$",
+    image: "cat.jpg",
+    id: "3",
+  },
+  {
+    name: "Zanzibar Gem",
+    path: "/shop/zanzibar-gem",
+    description:
+      "Houseplants make your home more beautiful, purify your air, boost your mood, help you sleep, and relieve dryness by raising the humidity in your rooms",
+    price: "19.99",
+    prefix: "$",
+    image: "plant.jpg",
+    id: "4",
+  },
+];
