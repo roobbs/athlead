@@ -15,22 +15,64 @@
   gap: 1.2rem;
   align-items: center;
 }
+.logo {
+  height: 3.5rem;
+}
 .auxiliar-menu {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
+/* .input-wrapper {
+  background-color: aqua;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 5px;
+}
+.input-wrapper:focus {
+  border: 1px solid red;
+}
 .search {
-  background-color: rgb(208, 208, 208);
   color: black;
+  background-color: transparent;
   border: none;
-  padding: 0.5rem;
   justify-self: center;
   align-self: center;
   border: 1px solid transparent;
 }
 .search:focus {
-  border: 1px solid rgb(255, 255, 255);
-  background-color: white;
-  border-radius: 0;
+  border: none;
+} */
+
+.input-wrapper {
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: rgb(206, 206, 206);
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.input-wrapper:focus-within {
+  border: 1px solid black;
+}
+input {
+  border: 2px solid transparent;
+  font-size: 1rem;
+  /* font-weight: 600; */
+  background-color: transparent;
+  transition: border-color 0.25s;
+  color: rgb(72, 72, 72);
+  outline: none;
+  letter-spacing: 1px;
+}
+input:focus {
+  color: rgb(0, 0, 0);
+  letter-spacing: 2px;
+}
+
+.inputImg {
+  height: 1.5rem;
 }

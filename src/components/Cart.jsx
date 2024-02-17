@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ShopContext } from "../App/App";
+import icon from "../assets/cart.png";
 import "../styles/Cart.css";
 
 export default function Cart() {
@@ -7,7 +8,7 @@ export default function Cart() {
 
   return (
     <div className="cartContainer">
-      <div className="cartIcon">Cart</div>
+      <img src={icon} alt="cart" className="cartIcon" />
       <div className="cartNum">{cartItems.length}</div>
     </div>
   );
