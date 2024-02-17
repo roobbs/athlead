@@ -14,10 +14,11 @@ export const ShopContext = createContext({
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
   const products = [];
-  const addToCart = () => console.log("hiShop");
+  const addToCart = (product) =>
+    setCartItems((prevState) => [...prevState, product]);
+
   return (
     <ShopContext.Provider value={{ cartItems, products, addToCart }}>
-      <div>Hola</div>
       <Header />
       <Content />
       <Footer />

@@ -1,7 +1,7 @@
 export default function Content() {
   return (
     <div>
-      <div>headerrrrr</div>
+      <div>This is the content</div>
     </div>
   );
 }

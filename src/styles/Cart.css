@@ -1,0 +1,11 @@
+.cartContainer {
+  position: relative;
+}
+.cartIcon {
+  padding: 5px 15px;
+}
+.cartNum {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
