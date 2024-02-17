@@ -1,0 +1,52 @@
+.footer1 {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  color: black;
+}
+.footerTitle {
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.footer1 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.footer1 ul .li {
+  border-bottom: 1px solid transparent;
+  transition: border 0.4s;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+.footer1 ul .li:hover {
+  border-bottom: 1px solid black;
+}
+.followImg {
+  height: 2rem;
+}
+.footer2 {
+  background-color: rgb(55, 55, 55);
+  color: white;
+  padding-bottom: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+.ulConfig {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.ulConfig li {
+  list-style: none;
+  transition: border 0.4s;
+  border-right: 2px solid white;
+  padding: 0rem 01.5rem;
+}
+.ulConfig li:hover {
+  cursor: pointer;
+}

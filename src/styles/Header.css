@@ -15,6 +15,15 @@
   gap: 1.2rem;
   align-items: center;
 }
+.links {
+  border-bottom: 3px solid transparent;
+  transition: border 0.5s ease-out;
+}
+.links:hover {
+  border-bottom: 3px solid black;
+  cursor: pointer;
+}
+
 .logo {
   height: 3.5rem;
 }
@@ -23,27 +32,6 @@
   gap: 1.5rem;
   align-items: center;
 }
-/* .input-wrapper {
-  background-color: aqua;
-  border: 1px solid transparent;
-  border-radius: 0;
-  padding: 5px;
-}
-.input-wrapper:focus {
-  border: 1px solid red;
-}
-.search {
-  color: black;
-  background-color: transparent;
-  border: none;
-  justify-self: center;
-  align-self: center;
-  border: 1px solid transparent;
-}
-.search:focus {
-  border: none;
-} */
-
 .input-wrapper {
   border-radius: 2px;
   overflow: hidden;
@@ -61,7 +49,6 @@
 input {
   border: 2px solid transparent;
   font-size: 1rem;
-  /* font-weight: 600; */
   background-color: transparent;
   transition: border-color 0.25s;
   color: rgb(72, 72, 72);
@@ -74,5 +61,6 @@ input:focus {
 }
 
 .inputImg {
-  height: 1.5rem;
+  height: 1.2rem;
+  cursor: pointer;
 }

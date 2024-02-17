@@ -18,15 +18,15 @@ export default function Header() {
     <div className="header">
       <img src={logo} alt="logo" className="logo" />
       <ul className="headerLinks">
-        <li>CALZADO</li>
-        <li>Mujer</li>
-        <li>Hombre</li>
+        <li className="links">CALZADO</li>
+        <li className="links">Mujer</li>
+        <li className="links">Hombre</li>
       </ul>
       <div className="auxiliar-menu">
         <div className="input-wrapper">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Buscar"
             className="search"
             value={inputValue}
             onChange={handleSearch}
