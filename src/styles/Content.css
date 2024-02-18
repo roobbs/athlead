@@ -1,0 +1,28 @@
+.content-container {
+  background-color: rgb(240, 240, 240);
+  color: black;
+  padding: 1rem 2rem;
+}
+.contentHeader {
+  display: grid;
+  grid-template-columns: 3.9fr 1fr;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.contentTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+.contentDescription {
+  font-family: monospace;
+  font-size: 1rem;
+}
+.productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}

@@ -1,0 +1,37 @@
+.imgCardContainer {
+  background-color: rgb(200, 200, 200);
+  height: 16rem;
+  position: relative;
+}
+.productImg {
+  width: 100%;
+}
+.favImg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 1.4rem;
+}
+.productPrice {
+  background-color: white;
+  width: min-content;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  position: absolute;
+  bottom: 0px;
+  left: 5px;
+  border-radius: 2px;
+}
+.productName {
+  font-family: monospace;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -1px;
+}
+.productCategory {
+  color: grey;
+}
+.productLabel {
+  font-size: 0.8rem;
+}
