@@ -4,6 +4,7 @@ import { createContext } from "react";
 import Header from "../components/Header";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
+import productsList from "../../products.js";
 
 export const ShopContext = createContext({
   products: [],
@@ -13,7 +14,7 @@ export const ShopContext = createContext({
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
-  const products = [];
+  const products = productsList;
   const addToCart = (product) =>
     setCartItems((prevState) => [...prevState, product]);
 

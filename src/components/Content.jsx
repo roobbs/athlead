@@ -1,7 +1,10 @@
+import { ShopContext } from "../App/App";
 import "../styles/Content.css";
 import ProductCard from "./ProductCard";
+import { useContext } from "react";
 
 export default function Content() {
+  const { products } = useContext(ShopContext);
   return (
     <div className="content-container">
       <div className="contentHeader">
@@ -15,34 +18,16 @@ export default function Content() {
         <div>filter</div>
       </div>
       <div className="productContainer">
-        <ProductCard
-          img="hola"
-          name="Tenis Gazelle Indoor"
-          price="2399"
-          category="Mujer Originals"
-          label="Envio Gratis"
-        />
-        <ProductCard
-          img="hola"
-          name="Tenis Gazelle Indoor"
-          price="2399"
-          category="Mujer Originals"
-          label="Envio Gratis"
-        />
-        <ProductCard
-          img="hola"
-          name="Tenis Gazelle Indoor"
-          price="2399"
-          category="Mujer Originals"
-          label="Envio Gratis"
-        />
-        <ProductCard
-          img="hola"
-          name="Tenis Gazelle Indoor"
-          price="2399"
-          category="Mujer Originals"
-          label="Envio Gratis"
-        />
+        {products.map((product) => (
+          <ProductCard
+            key={product.id}
+            name={product.name}
+            price={product.price}
+            category={product.category}
+            label={product.label}
+            img={product.image}
+          />
+        ))}
       </div>
     </div>
   );

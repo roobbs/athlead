@@ -1,6 +1,10 @@
+.productCardContainer {
+  box-shadow: outset 1px red;
+}
+
 .imgCardContainer {
   background-color: rgb(200, 200, 200);
-  height: 16rem;
+  height: auto;
   position: relative;
 }
 .productImg {
@@ -19,8 +23,8 @@
   font-size: 0.8rem;
   font-family: monospace;
   position: absolute;
-  bottom: 0px;
-  left: 5px;
+  bottom: 1px;
+  left: 10px;
   border-radius: 2px;
 }
 .productName {
