@@ -1,9 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { createContext } from "react";
-import Header from "../components/Header";
-import Content from "../components/Content";
-import Footer from "../components/Footer";
+import MainScreen from "../screens/MainScreen.jsx";
 import productsList from "../../products.js";
 
 export const ShopContext = createContext({
@@ -20,9 +18,7 @@ export default function App() {
 
   return (
     <ShopContext.Provider value={{ cartItems, products, addToCart }}>
-      <Header />
-      <Content />
-      <Footer />
+      <MainScreen />
     </ShopContext.Provider>
   );
 }
