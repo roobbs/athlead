@@ -6,7 +6,7 @@ import userImg from "../assets/usuario.png";
 import favImg from "../assets/favorito.png";
 import logo from "../assets/logo.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Header() {
   const [inputValue, setInputValue] = useState("");
@@ -16,43 +16,46 @@ export default function Header() {
   }
 
   return (
-    <div className="header">
-      <img src={logo} alt="logo" className="logo" />
-      <ul className="headerLinks">
-        <li className="links">CALZADO</li>
-        <li className="links">Mujer</li>
-        <li className="links">Hombre</li>
-      </ul>
-      <div className="auxiliar-menu">
-        <div className="input-wrapper">
-          <input
-            type="text"
-            placeholder="Buscar"
-            className="search"
-            value={inputValue}
-            onChange={handleSearch}
-          />
-          {inputValue.length >= 1 ? (
-            <img
-              src={cancelSearch}
-              alt="img"
-              className="inputImg"
-              onClick={() => setInputValue("")}
+    <>
+      <div className="header">
+        <img src={logo} alt="logo" className="logo" />
+        <ul className="headerLinks">
+          <li className="links">CALZADO</li>
+          <li className="links">Mujer</li>
+          <li className="links">Hombre</li>
+        </ul>
+        <div className="auxiliar-menu">
+          <div className="input-wrapper">
+            <input
+              type="text"
+              placeholder="Buscar"
+              className="search"
+              value={inputValue}
+              onChange={handleSearch}
             />
-          ) : (
-            <img src={searchImg} alt="img" className="inputImg" />
-          )}
+            {inputValue.length >= 1 ? (
+              <img
+                src={cancelSearch}
+                alt="img"
+                className="inputImg"
+                onClick={() => setInputValue("")}
+              />
+            ) : (
+              <img src={searchImg} alt="img" className="inputImg" />
+            )}
+          </div>
+          <div>
+            <img src={userImg} alt="" className="inputImg" />
+          </div>
+          <div>
+            <img src={favImg} alt="" className="inputImg" />
+          </div>
+          <Link to="cart">
+            <Cart />
+          </Link>
         </div>
-        <div>
-          <img src={userImg} alt="" className="inputImg" />
-        </div>
-        <div>
-          <img src={favImg} alt="" className="inputImg" />
-        </div>
-        <Link to="cart">
-          <Cart />
-        </Link>
       </div>
-    </div>
+      <Outlet />
+    </>
   );
 }
