@@ -6,6 +6,7 @@ import userImg from "../assets/usuario.png";
 import favImg from "../assets/favorito.png";
 import logo from "../assets/logo.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [inputValue, setInputValue] = useState("");
@@ -48,7 +49,9 @@ export default function Header() {
         <div>
           <img src={favImg} alt="" className="inputImg" />
         </div>
-        <Cart />
+        <Link to="cart">
+          <Cart />
+        </Link>
       </div>
     </div>
   );

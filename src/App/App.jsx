@@ -1,14 +1,23 @@
 import "./App.css";
-import { useState } from "react";
-import { createContext } from "react";
-import MainScreen from "../screens/MainScreen.jsx";
+import { useState, createContext } from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import productsList from "../../products.js";
+import MainScreen from "../screens/MainScreen.jsx";
+import CartScreen from "../screens/CartScreen.jsx";
 
 export const ShopContext = createContext({
   products: [],
   cartItems: [],
   addToCart: () => {},
 });
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainScreen />,
+    children: [{ path: "cart", element: <CartScreen /> }],
+  },
+]);
 
 export default function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -18,7 +27,7 @@ export default function App() {
 
   return (
     <ShopContext.Provider value={{ cartItems, products, addToCart }}>
-      <MainScreen />
+      <RouterProvider router={router} />
     </ShopContext.Provider>
   );
 }
