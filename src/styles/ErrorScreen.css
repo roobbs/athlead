@@ -1,0 +1,22 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(78, 78, 78);
+}
+.errorTitle {
+  font-size: 3rem;
+}
+.errorLink {
+  color: chartreuse;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: transform 1s;
+}
+.errorLink:hover {
+  color: darkturquoise;
+  transform: scale(1.1);
+}
