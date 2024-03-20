@@ -4,6 +4,7 @@ import "../styles/CartScreen.css";
 import { useContext } from "react";
 import { ShopContext } from "../App/App";
 import ProductCard from "../components/ProductCard";
+import CartCard from "../components/CartCard";
 import arrow from "../assets/right-arrow.png";
 
 export default function CartScreen() {
@@ -21,7 +22,17 @@ export default function CartScreen() {
             Los articulos en tu carrito no estan reservados. Termina el proceso
             de compra ahora para hacerte con ellos.
           </div>
-          <div>MAP PRODUCTOS</div>
+          <div className="cartCardMapContainer">
+            {cartItems.map((product, index) => (
+              <CartCard
+                key={index}
+                img={product.image}
+                name={product.name}
+                price={product.price}
+                category={product.category}
+              />
+            ))}
+          </div>
         </div>
         <div className="cartResume">
           <Link to="/" className="keepPayingButton">
