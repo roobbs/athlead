@@ -48,17 +48,30 @@ export default function CartScreen() {
             </div>
           </div>
           <div className="resumeTitle">RESUMEN DEL PEDIDO</div>
-          <div>
+          <div className="resumeInfoContainer">
             <div>{cartItems.length} productos</div>
-            <div>Entrega Gratis</div>
+            <div>$$$$</div>
           </div>
-          <div>
-            <div>Total</div>
+          <div className="resumeInfoContainer">
+            <div>Entrega</div>
+            <div>Gratis</div>
+          </div>
+          <div className="resumeInfoContainerLast">
+            <div>
+              <div>Total</div>
+              <div style={{ color: "grey", fontWeight: 400 }}>
+                (IVA incluido)
+              </div>
+            </div>
             <div>$precio</div>
-            <div>(IVA incluido)</div>
           </div>
-          <div>OPCIONES DE PAGO</div>
-          <div>LISTA DE OPCIONES</div>
+          <div className="payOptions">OPCIONES DE PAGO</div>
+          <div className="payOptionsImgContainer">
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+            <div>1</div>
+          </div>
         </div>
         <div className="favOnCartContainer">
           <div className="cartTitles">TUS FAVORITOS</div>

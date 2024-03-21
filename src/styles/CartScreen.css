@@ -19,10 +19,11 @@
 }
 /*                                */
 .cartResume {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 .cartTitles {
   font-weight: 700;
@@ -30,7 +31,7 @@
   letter-spacing: 3px;
 }
 .keepBuyingButtonContainer {
-  width: 90%;
+  width: 100%;
   border: 2px solid transparent;
   background-color: black;
   align-self: center;
@@ -61,7 +62,7 @@
 }
 .cartPayButtonContainer {
   border: 2px solid black;
-  width: 90%;
+  width: 100%;
   align-self: center;
 }
 .cartPayButton {
@@ -85,6 +86,25 @@
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: 3px;
+}
+.resumeInfoContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.resumeInfoContainerLast {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.payOptions {
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+.payOptionsImgContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
 }
 /*                               */
 .favOnCartContainer {
