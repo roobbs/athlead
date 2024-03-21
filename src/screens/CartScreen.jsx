@@ -35,10 +35,12 @@ export default function CartScreen() {
           </div>
         </div>
         <div className="cartResume">
-          <Link to="/" className="keepPayingButton">
-            <div>SEGUIR COMPRANDO</div>
-            <img src={arrow} alt="" className="buyIcon" />
-          </Link>
+          <div className="keepBuyingButtonContainer">
+            <Link to="/" className="keepBuyingButton">
+              <div>SEGUIR COMPRANDO</div>
+              <img src={arrow} alt="" className="buyIcon" />
+            </Link>
+          </div>
           <div className="cartPayButtonContainer">
             <div className="cartPayButton">
               <div>IR A PAGAR</div>
