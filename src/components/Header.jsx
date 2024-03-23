@@ -7,9 +7,12 @@ import favImg from "../assets/favorito.png";
 import logo from "../assets/logo.png";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import { useContext } from "react";
+import { ShopContext } from "../App/App";
 
 export default function Header() {
   const [inputValue, setInputValue] = useState("");
+  const { favItems } = useContext(ShopContext);
 
   function handleSearch(event) {
     setInputValue(event.target.value);
@@ -51,8 +54,11 @@ export default function Header() {
           <div>
             <img src={userImg} alt="" className="inputImg" />
           </div>
-          <Link to={"favorites"}>
+          <Link to={"favorites"} className="favIconContainer">
             <img src={favImg} alt="" className="inputImg" />
+            {favItems.length > 0 && (
+              <div className="favNum">{favItems.length}</div>
+            )}
           </Link>
           <Link to="cart">
             <Cart />
