@@ -2,9 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Header from "./components/Header";
 import MainScreen from "./screens/MainScreen";
 import CartScreen from "./screens/CartScreen";
+import FavoritesScreen from "./screens/FavoritesScreen";
 import ErrorScreen from "./screens/ErrorScreen";
 
-const Router = () => {
+export default function Router() {
   const router = createBrowserRouter([
     {
       path: "/",
@@ -13,11 +14,10 @@ const Router = () => {
       children: [
         { index: true, element: <MainScreen /> },
         { path: "cart", element: <CartScreen /> },
+        { path: "favorites", element: <FavoritesScreen /> },
       ],
     },
   ]);
 
   return <RouterProvider router={router} />;
-};
-
-export default Router;
+}

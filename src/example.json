@@ -1,0 +1,39 @@
+{
+  "users": {
+    "uid": {},
+    "email": {},
+    "name": {},
+    "contacts": [
+      {
+        "cardNumber": {},
+        "name": {}
+      }
+    ],
+    "cards": [
+      {
+        "type": "debito",
+        "saldo": {},
+        "numero": {},
+        "movimientos": [
+          {
+            "fecha": {},
+            "descripcion": {},
+            "monto": {}
+          }
+        ]
+      },
+      {
+        "type": "credito",
+        "saldo": {},
+        "numero": {},
+        "movimientos": [
+          {
+            "fecha": {},
+            "descripcion": {},
+            "monto": {}
+          }
+        ]
+      }
+    ]
+  }
+}

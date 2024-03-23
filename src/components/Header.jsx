@@ -47,9 +47,9 @@ export default function Header() {
           <div>
             <img src={userImg} alt="" className="inputImg" />
           </div>
-          <div>
+          <Link to={"favorites"}>
             <img src={favImg} alt="" className="inputImg" />
-          </div>
+          </Link>
           <Link to="cart">
             <Cart />
           </Link>
