@@ -1,5 +1,9 @@
 .cartContainer {
   position: relative;
+  transition: transform 0.5s;
+}
+.cartContainer:hover {
+  transform: scale(1.1);
 }
 .cartIcon {
   padding: 5px 15px;

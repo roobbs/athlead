@@ -20,7 +20,11 @@ export default function Header() {
       <div className="header">
         <img src={logo} alt="logo" className="logo" />
         <ul className="headerLinks">
-          <li className="links">CALZADO</li>
+          <li className="links">
+            <Link to="/">
+              <div>CALZADO</div>
+            </Link>
+          </li>
           <li className="links">Mujer</li>
           <li className="links">Hombre</li>
         </ul>
