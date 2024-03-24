@@ -29,7 +29,7 @@ export default function Content() {
               category={product.category}
               label={product.label}
               img={product.image}
-              fav={favItems.includes(product)}
+              product={product}
             />
           );
         })}

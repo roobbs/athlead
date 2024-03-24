@@ -1,7 +1,7 @@
 import "../styles/ProductCard.css";
 import favIcon from "../assets/favorito.png";
 import favIcon1 from "../assets/favorito1.png";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { ShopContext } from "../App/App";
 
 export default function ProductCard({
@@ -10,10 +10,15 @@ export default function ProductCard({
   price,
   category,
   label,
-  fav,
+  product,
 }) {
-  const [isFav, setIsFav] = useState(fav);
+  const [isFav, setIsFav] = useState();
   const { favItems, setFavItems, products } = useContext(ShopContext);
+
+  useEffect(() => {
+    setIsFav(favItems.includes(product));
+    console.log(isFav);
+  }, [favItems, isFav, product]);
   // // const productIsFav = ;
   // () => setIsFav(favItems.includes(product));
   // console.log(isFav);

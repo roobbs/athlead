@@ -80,6 +80,7 @@ export default function CartScreen() {
               category={product.category}
               label={product.label}
               img={product.image}
+              product={product}
             />
           ))}
         </div>
