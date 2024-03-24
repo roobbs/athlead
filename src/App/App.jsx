@@ -9,6 +9,7 @@ export const ShopContext = createContext({
   addToCart: () => {},
   favItems: [],
   addToFav: () => {},
+  eraseFav: () => {},
 });
 
 export default function App() {
@@ -21,6 +22,12 @@ export default function App() {
   const addToFav = (product) => {
     setFavItems((prevState) => [...prevState, product]);
   };
+  const eraseFav = (product) => {
+    //eraseProduct
+    setFavItems((prevState) =>
+      prevState.filter((item) => item.id !== product.id)
+    );
+  };
 
   //DELETE useEffect
   useEffect(() => {
@@ -32,7 +39,7 @@ export default function App() {
 
   return (
     <ShopContext.Provider
-      value={{ products, cartItems, addToCart, favItems, addToFav }}
+      value={{ products, cartItems, addToCart, favItems, addToFav, eraseFav }}
     >
       <Router />
     </ShopContext.Provider>

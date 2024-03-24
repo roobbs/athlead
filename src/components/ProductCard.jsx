@@ -13,15 +13,12 @@ export default function ProductCard({
   product,
 }) {
   const [isFav, setIsFav] = useState();
-  const { favItems, setFavItems, products } = useContext(ShopContext);
+  const { favItems, addToFav, eraseFav } = useContext(ShopContext);
 
   useEffect(() => {
     setIsFav(favItems.includes(product));
     console.log(isFav);
   }, [favItems, isFav, product]);
-  // // const productIsFav = ;
-  // () => setIsFav(favItems.includes(product));
-  // console.log(isFav);
 
   return (
     <div className="productCardContainer">
@@ -31,7 +28,13 @@ export default function ProductCard({
           src={isFav ? favIcon1 : favIcon}
           alt="fav"
           className="favImg"
-          onClick={() => setIsFav(!isFav)}
+          onClick={() => {
+            if (!isFav) {
+              addToFav(product);
+            } else {
+              eraseFav(product);
+            }
+          }}
         />
         <div className="productPrice">${price}</div>
       </div>
