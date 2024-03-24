@@ -4,6 +4,7 @@ import MainScreen from "./screens/MainScreen";
 import CartScreen from "./screens/CartScreen";
 import FavoritesScreen from "./screens/FavoritesScreen";
 import ErrorScreen from "./screens/ErrorScreen";
+import ProductScreen from "./screens/ProductScreen";
 
 export default function Router() {
   const router = createBrowserRouter([
@@ -15,6 +16,7 @@ export default function Router() {
         { index: true, element: <MainScreen /> },
         { path: "cart", element: <CartScreen /> },
         { path: "favorites", element: <FavoritesScreen /> },
+        { path: "product/:productId", element: <ProductScreen /> },
       ],
     },
   ]);
