@@ -27,7 +27,7 @@ export default function App() {
     addToCart(products[1]);
     addToCart(products[2]);
     addToFav(products[2]);
-  }, []);
+  }, [products]);
   console.log(cartItems);
 
   return (

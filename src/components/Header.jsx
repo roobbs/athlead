@@ -5,6 +5,7 @@ import cancelSearch from "../assets/x.png";
 import userImg from "../assets/usuario.png";
 import favImg from "../assets/favorito.png";
 import logo from "../assets/logo.png";
+import Footer from "./Footer";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useContext } from "react";
@@ -66,6 +67,7 @@ export default function Header() {
         </div>
       </div>
       <Outlet />
+      <Footer></Footer>
     </>
   );
 }

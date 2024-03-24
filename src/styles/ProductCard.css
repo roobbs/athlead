@@ -1,9 +1,11 @@
 .productCardContainer {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   /* background-color: white; */
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
-
+.productCardContainer:hover .productPrice {
+  transform: translateX(0.5rem) scale(1.1);
+}
 .imgCardContainer {
   position: relative;
   display: flex;
@@ -16,6 +18,10 @@
   top: 10px;
   right: 10px;
   width: 1.4rem;
+  transition: transform 0.5s;
+}
+.favImg:hover {
+  transform: scale(1.1);
 }
 .productPrice {
   background-color: white;
@@ -28,6 +34,7 @@
   left: 10px;
   border-radius: 2px;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s;
 }
 .productName {
   font-family: monospace;

@@ -4,7 +4,7 @@ import ProductCard from "./ProductCard";
 import { useContext } from "react";
 
 export default function Content() {
-  const { products } = useContext(ShopContext);
+  const { products, favItems } = useContext(ShopContext);
   return (
     <div className="content-container">
       <div className="contentHeader">
@@ -18,16 +18,21 @@ export default function Content() {
         <div>filter</div>
       </div>
       <div className="productContainer">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            name={product.name}
-            price={product.price}
-            category={product.category}
-            label={product.label}
-            img={product.image}
-          />
-        ))}
+        {products.map((product) => {
+          // const checkFav = favItems.includes(product);
+          // console.log(checkFav);
+          return (
+            <ProductCard
+              key={product.id}
+              name={product.name}
+              price={product.price}
+              category={product.category}
+              label={product.label}
+              img={product.image}
+              fav={favItems.includes(product)}
+            />
+          );
+        })}
       </div>
     </div>
   );

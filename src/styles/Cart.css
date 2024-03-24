@@ -1,13 +1,13 @@
 .cartContainer {
   position: relative;
-  transition: transform 0.5s;
-}
-.cartContainer:hover {
-  transform: scale(1.1);
+  padding: 10px 15px;
 }
 .cartIcon {
-  padding: 10px 15px;
-  height: 1.6rem;
+  height: 1.3rem;
+  transition: transform 0.5s;
+}
+.cartIcon:hover {
+  transform: scale(1.2);
 }
 .cartNum {
   position: absolute;
