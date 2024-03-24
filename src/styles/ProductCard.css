@@ -25,6 +25,7 @@
 }
 .productPrice {
   background-color: white;
+  color: black;
   width: min-content;
   padding: 2px 5px;
   font-size: 0.9rem;
@@ -41,10 +42,12 @@
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: -1px;
+  color: black;
 }
 .productCategory {
   color: grey;
 }
 .productLabel {
   font-size: 0.8rem;
+  color: black;
 }

@@ -30,6 +30,7 @@ export default function Content() {
               label={product.label}
               img={product.image}
               product={product}
+              id={product.id}
             />
           );
         })}
