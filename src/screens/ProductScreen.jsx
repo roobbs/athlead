@@ -5,6 +5,9 @@ import "../styles/ProductScreen.css";
 import arrow from "../assets/right-arrow.png";
 import favIcon from "../assets/favorito.png";
 import favIcon1 from "../assets/favorito1.png";
+import entrega from "../assets/entrega.png";
+import check from "../assets/check.png";
+import DisplayInfo from "../components/DisplayInfo";
 
 export default function ProductScreen() {
   const { productId } = useParams();
@@ -28,9 +31,12 @@ export default function ProductScreen() {
           <img src={selectedProduct.image} alt="productImage" />
         </div>
         <div>
-          <div>Descripcion</div>
-          <div>Description TITle</div>
-          <div>Description Text</div>
+          <DisplayInfo title={"Descripcion"}>
+            <div>descripcoin</div>
+          </DisplayInfo>
+          <DisplayInfo title={"Detalles"}>
+            <div>hola</div>
+          </DisplayInfo>
         </div>
       </div>
       <div className="productScreenSideBar">
@@ -47,10 +53,9 @@ export default function ProductScreen() {
               <img src={arrow} alt="" className="payIcon" />
             </div>
           </div>
-
           <img
             src={isFav ? favIcon1 : favIcon}
-            alt=""
+            alt="favIcon"
             className="productScreenFavIcon"
             onClick={() => {
               if (!isFav) {
@@ -60,6 +65,16 @@ export default function ProductScreen() {
               }
             }}
           />
+        </div>
+        <div style={{ display: "flex", gap: 20, flexDirection: "column" }}>
+          <div className="infoContainer">
+            <img src={entrega} alt="" className="infoIcon" />
+            <div>ENVIOS A PARTIR DE $1199</div>
+          </div>
+          <div className="infoContainer">
+            <img src={check} alt="" className="infoIcon" />
+            <div>COMUNICATE CON NOSOTROS</div>
+          </div>
         </div>
       </div>
     </div>

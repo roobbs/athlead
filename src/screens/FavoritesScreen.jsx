@@ -29,6 +29,7 @@ export default function FavoritesScreen() {
             label={product.label}
             img={product.image}
             product={product}
+            id={product.id}
           />
         ))}
       </div>

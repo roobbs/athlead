@@ -31,7 +31,8 @@ export default function ProductCard({
             src={isFav ? favIcon1 : favIcon}
             alt="fav"
             className="favImg"
-            onClick={() => {
+            onClick={(event) => {
+              event.preventDefault();
               if (!isFav) {
                 addToFav(product);
               } else {
