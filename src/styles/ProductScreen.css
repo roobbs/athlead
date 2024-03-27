@@ -80,7 +80,7 @@
 .productScreenFavIcon:hover {
   transform: scale(1.1);
 }
-.infoContainer {
+.productScreenInfoContainer {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -92,11 +92,11 @@
   width: 1.5rem;
   height: 1.5rem;
 }
-.infoContainer div {
+.productScreenInfoContainer div {
   border-bottom: 1px solid black;
   transition: background-color 0.5s, color 0.2s;
 }
-.infoContainer div:hover {
+.productScreenInfoContainer div:hover {
   background-color: black;
   color: white;
 }

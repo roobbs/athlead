@@ -1,8 +1,13 @@
 import favIcon from "../assets/favorito.png";
 import xIcon from "../assets/x.png";
 import "../styles/CartCard.css";
+import { useContext } from "react";
+import { ShopContext } from "../App/App";
 
-export default function CartCard({ img, name, price, category }) {
+export default function CartCard({ img, name, price, category, product }) {
+  const { cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
+    useContext(ShopContext);
+
   return (
     <div className="cardContainer">
       <img src={img} alt="img" className="productCartImg" />
@@ -26,8 +31,18 @@ export default function CartCard({ img, name, price, category }) {
         <div className="productCartPrice">${price} </div>
       </div>
       <div className="iconContainer">
-        <img src={xIcon} alt="fav" className="favCartImg" />
-        <img src={favIcon} alt="fav" className="favCartImg" />
+        <img
+          src={xIcon}
+          alt="fav"
+          className="favCartImg"
+          onClick={() => eraseFromCart(product)}
+        />
+        <img
+          src={favIcon}
+          alt="fav"
+          className="favCartImg"
+          onClick={() => {}}
+        />
       </div>
     </div>
   );

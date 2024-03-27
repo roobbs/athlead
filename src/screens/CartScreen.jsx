@@ -7,7 +7,8 @@ import CartCard from "../components/CartCard";
 import arrow from "../assets/right-arrow.png";
 
 export default function CartScreen() {
-  const { cartItems, favItems } = useContext(ShopContext);
+  const { cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
+    useContext(ShopContext);
 
   return (
     <div className="cartScreenContainer">
@@ -28,6 +29,7 @@ export default function CartScreen() {
               name={product.name}
               price={product.price}
               category={product.category}
+              product={product}
             />
           ))}
         </div>
@@ -81,6 +83,7 @@ export default function CartScreen() {
               label={product.label}
               img={product.image}
               product={product}
+              id={product.id}
             />
           ))}
         </div>

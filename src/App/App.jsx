@@ -7,6 +7,7 @@ export const ShopContext = createContext({
   products: [],
   cartItems: [],
   addToCart: () => {},
+  eraseFromCart: () => {},
   favItems: [],
   addToFav: () => {},
   eraseFav: () => {},
@@ -19,6 +20,11 @@ export default function App() {
   const addToCart = (product) => {
     setCartItems((prevState) => [...prevState, product]);
   };
+  const eraseFromCart = (product) => {
+    setCartItems((prevState) =>
+      prevState.filter((item) => item.id !== product.id)
+    );
+  };
   const addToFav = (product) => {
     setFavItems((prevState) => [...prevState, product]);
   };
@@ -28,7 +34,6 @@ export default function App() {
       prevState.filter((item) => item.id !== product.id)
     );
   };
-
   //DELETE useEffect
   useEffect(() => {
     addToCart(products[1]);
@@ -39,7 +44,15 @@ export default function App() {
 
   return (
     <ShopContext.Provider
-      value={{ products, cartItems, addToCart, favItems, addToFav, eraseFav }}
+      value={{
+        products,
+        cartItems,
+        addToCart,
+        favItems,
+        addToFav,
+        eraseFav,
+        eraseFromCart,
+      }}
     >
       <Router />
     </ShopContext.Provider>

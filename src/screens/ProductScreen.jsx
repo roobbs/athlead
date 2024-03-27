@@ -11,8 +11,8 @@ import DisplayInfo from "../components/DisplayInfo";
 
 export default function ProductScreen() {
   const { productId } = useParams();
-  const { products, favItems, addToFav, eraseFav } = useContext(ShopContext);
-  // // const [info, setInfo] = useState(false);
+  const { products, favItems, addToFav, eraseFav, addToCart } =
+    useContext(ShopContext);
   const [isFav, setIsFav] = useState(false);
 
   const selectedProduct = products.find((prod) => prod.id === productId);
@@ -48,7 +48,10 @@ export default function ProductScreen() {
         <div>{selectedProduct.label}</div>
         <div className="prodScreenButtonsContainer">
           <div className="cartPayButtonContainer">
-            <div className="cartPayButton">
+            <div
+              className="cartPayButton"
+              onClick={() => addToCart(selectedProduct)}
+            >
               <div>Agregar al carrito</div>
               <img src={arrow} alt="" className="payIcon" />
             </div>
@@ -67,11 +70,11 @@ export default function ProductScreen() {
           />
         </div>
         <div style={{ display: "flex", gap: 20, flexDirection: "column" }}>
-          <div className="infoContainer">
+          <div className="productScreenInfoContainer">
             <img src={entrega} alt="" className="infoIcon" />
             <div>ENVIOS A PARTIR DE $1199</div>
           </div>
-          <div className="infoContainer">
+          <div className="ProductScreenInfoContainer">
             <img src={check} alt="" className="infoIcon" />
             <div>COMUNICATE CON NOSOTROS</div>
           </div>
