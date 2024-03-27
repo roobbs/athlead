@@ -1,12 +1,19 @@
 import favIcon from "../assets/favorito.png";
+import favIcon1 from "../assets/favorito1.png";
 import xIcon from "../assets/x.png";
 import "../styles/CartCard.css";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../App/App";
 
 export default function CartCard({ img, name, price, category, product }) {
-  const { cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
+  const [isFav, setIsFav] = useState();
+  const { products, cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
     useContext(ShopContext);
+
+  useEffect(() => {
+    setIsFav(favItems.includes(product));
+    console.log(isFav);
+  }, [favItems, isFav, product]);
 
   return (
     <div className="cardContainer">
@@ -38,10 +45,16 @@ export default function CartCard({ img, name, price, category, product }) {
           onClick={() => eraseFromCart(product)}
         />
         <img
-          src={favIcon}
+          src={isFav ? favIcon1 : favIcon}
           alt="fav"
           className="favCartImg"
-          onClick={() => {}}
+          onClick={() => {
+            if (!isFav) {
+              addToFav(product);
+            } else {
+              eraseFav(product);
+            }
+          }}
         />
       </div>
     </div>
