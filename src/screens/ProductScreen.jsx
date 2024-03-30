@@ -32,10 +32,15 @@ export default function ProductScreen() {
         </div>
         <div>
           <DisplayInfo title={"Descripcion"}>
-            <div>descripcoin</div>
+            <h3>{selectedProduct.description[0]}</h3>
+            <div>{selectedProduct.description[1]}</div>
           </DisplayInfo>
           <DisplayInfo title={"Detalles"}>
-            <div>hola</div>
+            <ul>
+              {selectedProduct.specifications.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           </DisplayInfo>
         </div>
       </div>
@@ -74,7 +79,7 @@ export default function ProductScreen() {
             <img src={entrega} alt="" className="infoIcon" />
             <div>ENVIOS A PARTIR DE $1199</div>
           </div>
-          <div className="ProductScreenInfoContainer">
+          <div className="productScreenInfoContainer">
             <img src={check} alt="" className="infoIcon" />
             <div>COMUNICATE CON NOSOTROS</div>
           </div>

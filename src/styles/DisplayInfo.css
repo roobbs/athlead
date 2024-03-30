@@ -22,3 +22,13 @@
 .displayInfoChildren {
   padding: 2rem;
 }
+.displayInfoChildren h3 {
+  font-size: 2rem;
+}
+.displayInfoChildren div {
+  font-size: 1.2rem;
+}
+.displayInfoChildren li {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
