@@ -19,8 +19,6 @@ export default function Content() {
       </div>
       <div className="productContainer">
         {products.map((product) => {
-          // const checkFav = favItems.includes(product);
-          // console.log(checkFav);
           return (
             <ProductCard
               key={product.id}

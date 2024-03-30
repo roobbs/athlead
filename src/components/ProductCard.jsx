@@ -19,7 +19,6 @@ export default function ProductCard({
 
   useEffect(() => {
     setIsFav(favItems.includes(product));
-    console.log(isFav);
   }, [favItems, isFav, product]);
 
   return (

@@ -9,13 +9,25 @@ import arrow from "../assets/right-arrow.png";
 export default function CartScreen() {
   const { cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
     useContext(ShopContext);
+  let totalPayment = 0;
+  cartItems.map((item) => {
+    const price = item.price * item.quantity;
+    totalPayment += price;
+  });
+  let totalItems = 0;
+  if (cartItems.length > 0) {
+    cartItems.map((item) => {
+      totalItems += item.quantity;
+      console.log(totalItems);
+    });
+  }
 
   return (
     <div className="cartScreenContainer">
       <div className="cartProductsInfo">
         <div className="cartTitles">TU CARRITO</div>
         <div style={{ color: "grey", fontStyle: "italic" }}>
-          TOTAL ({cartItems.length} productos)
+          TOTAL ({totalItems} productos)
         </div>
         <div>
           Los articulos en tu carrito no estan reservados. Termina el proceso de
@@ -49,8 +61,8 @@ export default function CartScreen() {
         </div>
         <div className="resumeTitle">RESUMEN DEL PEDIDO</div>
         <div className="resumeInfoContainer">
-          <div>{cartItems.length} productos</div>
-          <div>$$$$</div>
+          <div>{totalItems} productos</div>
+          <div>$ {totalPayment}</div>
         </div>
         <div className="resumeInfoContainer">
           <div>Entrega</div>
@@ -61,7 +73,7 @@ export default function CartScreen() {
             <div>Total</div>
             <div style={{ color: "grey", fontWeight: 400 }}>(IVA incluido)</div>
           </div>
-          <div>$precio</div>
+          <div>$ {totalPayment}</div>
         </div>
         <div className="payOptions">OPCIONES DE PAGO</div>
         <div className="payOptionsImgContainer">

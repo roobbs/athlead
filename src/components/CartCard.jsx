@@ -7,12 +7,11 @@ import { ShopContext } from "../App/App";
 
 export default function CartCard({ img, name, price, category, product }) {
   const [isFav, setIsFav] = useState();
-  const { products, cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
+  const { favItems, eraseFromCart, addToFav, eraseFav, changeQuantity } =
     useContext(ShopContext);
 
   useEffect(() => {
     setIsFav(favItems.includes(product));
-    console.log(isFav);
   }, [favItems, isFav, product]);
 
   return (
@@ -26,7 +25,13 @@ export default function CartCard({ img, name, price, category, product }) {
             <div className="productCategory">{category}</div>
           </div>
           <div>
-            <select className="quantity">
+            <select
+              className="quantity"
+              defaultValue={product.quantity}
+              onChange={(event) =>
+                changeQuantity(product, parseInt(event.target.value))
+              }
+            >
               {[...Array(9).keys()].map((num) => (
                 <option key={num + 1} value={num + 1}>
                   <div className="optionDiv">{num + 1}</div>

@@ -17,8 +17,29 @@ export default function App() {
   const [cartItems, setCartItems] = useState([]);
   const [favItems, setFavItems] = useState([]);
   const products = productsList;
+
   const addToCart = (product) => {
-    setCartItems((prevState) => [...prevState, product]);
+    if (cartItems.some((item) => item.id === product.id)) {
+      const updatedCartItems = cartItems.map((item) => {
+        if (item.id === product.id) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+      setCartItems(updatedCartItems);
+    } else {
+      product.quantity = 1;
+      setCartItems((prevState) => [...prevState, product]);
+    }
+  };
+  const changeQuantity = (product, quantity) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === product.id) {
+        item.quantity = quantity;
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
   };
   const eraseFromCart = (product) => {
     setCartItems((prevState) =>
@@ -34,13 +55,13 @@ export default function App() {
       prevState.filter((item) => item.id !== product.id)
     );
   };
+
   //DELETE useEffect
   useEffect(() => {
     addToCart(products[1]);
     addToCart(products[2]);
     addToFav(products[2]);
   }, [products]);
-  console.log(cartItems);
 
   return (
     <ShopContext.Provider
@@ -52,6 +73,7 @@ export default function App() {
         addToFav,
         eraseFav,
         eraseFromCart,
+        changeQuantity,
       }}
     >
       <Router />
