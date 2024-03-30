@@ -5,6 +5,7 @@ import cancelSearch from "../assets/x.png";
 import userImg from "../assets/usuario.png";
 import favImg from "../assets/favorito.png";
 import logo from "../assets/logo.png";
+import athlead from "../assets/athlead.png";
 import Footer from "./Footer";
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
@@ -22,7 +23,7 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <img src={logo} alt="logo" className="logo" />
+        <img src={athlead} alt="logo" className="logo" />
         <ul className="headerLinks">
           <li className="links">
             <Link to="/">

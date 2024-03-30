@@ -25,10 +25,10 @@ export default function ProductScreen() {
     <div className="productScreenContainer">
       <div className="productScreenContent">
         <div className="productImagesContainer">
-          <img src={selectedProduct.image} alt="productImage" />
-          <img src={selectedProduct.image} alt="productImage" />
-          <img src={selectedProduct.image} alt="productImage" />
-          <img src={selectedProduct.image} alt="productImage" />
+          <img src={selectedProduct.images[0]} alt="productImage" />
+          <img src={selectedProduct.images[1]} alt="productImage" />
+          <img src={selectedProduct.images[2]} alt="productImage" />
+          <img src={selectedProduct.images[3]} alt="productImage" />
         </div>
         <div>
           <DisplayInfo title={"Descripcion"}>
