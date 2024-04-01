@@ -1,10 +1,10 @@
 import { ShopContext } from "../App/App";
-import "../styles/Content.css";
-import ProductCard from "./ProductCard";
+import "../styles/AllProducts.css";
+import ProductCard from "../components/ProductCard";
 import { useContext } from "react";
 
-export default function Content() {
-  const { products, favItems } = useContext(ShopContext);
+export default function AllProducts() {
+  const { products } = useContext(ShopContext);
   return (
     <div className="content-container">
       <div className="contentHeader">

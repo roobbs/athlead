@@ -4,7 +4,6 @@ import searchImg from "../assets/buscar.png";
 import cancelSearch from "../assets/x.png";
 import userImg from "../assets/usuario.png";
 import favImg from "../assets/favorito.png";
-import logo from "../assets/logo.png";
 import athlead from "../assets/athlead.png";
 import Footer from "./Footer";
 import { useState } from "react";
@@ -23,15 +22,25 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <img src={athlead} alt="logo" className="logo" />
+        <Link to="/">
+          <img src={athlead} alt="logo" className="logo" />
+        </Link>
         <ul className="headerLinks">
           <li className="links">
-            <Link to="/">
+            <Link to="all">
               <div>CALZADO</div>
             </Link>
           </li>
-          <li className="links">Mujer</li>
-          <li className="links">Hombre</li>
+          <li className="links">
+            <Link to="women">
+              <div>Mujer</div>
+            </Link>
+          </li>
+          <li className="links">
+            <Link to="men">
+              <div>Hombre</div>
+            </Link>
+          </li>
         </ul>
         <div className="auxiliar-menu">
           <div className="input-wrapper">
