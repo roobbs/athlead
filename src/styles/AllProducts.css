@@ -11,18 +11,33 @@
   align-items: center;
 }
 .contentTitle {
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 4px;
   font-style: italic;
-  font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 .contentDescription {
-  font-family: monospace;
+  /* font-family: monospace; */
   font-size: 1rem;
+  letter-spacing: 1px;
 }
 .productContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+.footerDescriptionContainer {
+  padding: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+.footerTitleDescription {
+  font-weight: 900;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 3px;
+  font-size: 2rem;
+}
+.footerDescription {
+  /* padding: 4rem; */
 }

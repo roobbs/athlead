@@ -5,20 +5,22 @@ import { useContext } from "react";
 
 export default function MenProducts() {
   const { products } = useContext(ShopContext);
+  const filteredProducts = products.filter((item) => item.category !== "Mujer");
   return (
     <div className="content-container">
       <div className="contentHeader">
         <div>
-          <div className="contentTitle">Todo nuestro calzado</div>
+          <div className="contentTitle">Calzado para hombre</div>
           <div className="contentDescription">
-            El mejor calzado deportivo y para tener un estilo casual en el día a
-            día, con la comodidad como prioridad. Conócelos ahora.
+            Encuentra los sneakers adecuados para tener toda la comodidad
+            necesaria y vivir con todo el estilo que se adapte a tu
+            personalidad.
           </div>
         </div>
         <div>filter</div>
       </div>
       <div className="productContainer">
-        {products.map((product) => {
+        {filteredProducts.map((product) => {
           return (
             <ProductCard
               key={product.id}
