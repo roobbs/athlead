@@ -5,10 +5,10 @@ import { ShopContext } from "../App/App";
 import ProductCard from "../components/ProductCard";
 import CartCard from "../components/CartCard";
 import arrow from "../assets/right-arrow.png";
+import WhiteButton from "../components/WhiteButton";
 
 export default function CartScreen() {
-  const { cartItems, favItems, eraseFromCart, addToFav, eraseFav } =
-    useContext(ShopContext);
+  const { cartItems, favItems } = useContext(ShopContext);
   let totalPayment = 0;
   cartItems.map((item) => {
     const price = item.price * item.quantity;
@@ -47,12 +47,9 @@ export default function CartScreen() {
         </div>
       </div>
       <div className="cartResume">
-        <div className="keepBuyingButtonContainer">
-          <Link to="/" className="keepBuyingButton">
-            <div>SEGUIR COMPRANDO</div>
-            <img src={arrow} alt="" className="buyIcon" />
-          </Link>
-        </div>
+        <Link to="/all">
+          <WhiteButton text="SEGUIR COMPRANDO" />
+        </Link>
         <div className="cartPayButtonContainer">
           <div className="cartPayButton">
             <div>IR A PAGAR</div>

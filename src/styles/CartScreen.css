@@ -30,35 +30,9 @@
   font-size: 1.8rem;
   letter-spacing: 3px;
 }
-.keepBuyingButtonContainer {
-  width: 100%;
-  border: 2px solid transparent;
-  background-color: black;
-  align-self: center;
-}
-.keepBuyingButton {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
-  font-weight: 700;
-  letter-spacing: 3px;
-  align-self: flex-start;
-  padding: 1rem;
-  border-radius: 2px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* gap: 10rem; */
-  transform: translate(-5px, -5px);
-  transition: transform 0.5s, border-color 0.5s;
-}
-.keepBuyingButton:hover,
 .cartPayButton:hover {
   transform: translate(0px, 0px);
   border-color: transparent;
-}
-.buyIcon {
-  width: 1.8rem;
 }
 .cartPayButtonContainer {
   border: 2px solid black;

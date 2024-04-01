@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard";
 import { ShopContext } from "../App/App";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import arrow from "../assets/right-arrow.png";
+import WhiteButton from "../components/WhiteButton";
 
 export default function FavoritesScreen() {
   const { favItems } = useContext(ShopContext);
@@ -12,12 +12,9 @@ export default function FavoritesScreen() {
     <div className="favScreenContainer">
       <div className="favTitleContainer">
         <div className="cartTitles">TUS FAVORITOS</div>
-        <div className="favKeepBuyingButtonContainer">
-          <Link to="/" className="keepBuyingButton">
-            <div>Seguir Comprando</div>
-            <img src={arrow} alt="" className="buyIcon" />
-          </Link>
-        </div>
+        <Link to="/all">
+          <WhiteButton text="Seguir Comprando" />
+        </Link>
       </div>
       <div className="favItemsContainer">
         {favItems.map((product) => (
