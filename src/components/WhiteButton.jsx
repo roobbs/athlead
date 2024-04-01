@@ -1,5 +1,5 @@
 import arrow from "../assets/right-arrow.png";
-import "../styles/whiteButton.css";
+import "../styles/WhiteButton.css";
 
 export default function WhiteButton({ text }) {
   return (
