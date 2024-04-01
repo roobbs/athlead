@@ -24,7 +24,7 @@ export default function MainScreen() {
         <div className="container">
           <img src={women} alt="" className="mainPic" />
           <Link to="women" className="mainScreenLink">
-            <WhiteButton text="Comprar calzado para mujer" />
+            <WhiteButton text="Comprar calzado para Mujer" />
           </Link>
         </div>
       </div>

@@ -1,31 +1,24 @@
 .mainScreenContainer {
-  /* display: flex; */
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
   background-color: #f8f8f8;
   color: black;
-  /* display: grid; */
-  /* gap: 1rem; */
-  /* grid-template-columns: 3fr 2fr; */
-  /* padding: 2.5rem; */
 }
 .container {
   position: relative;
 }
 .mainPic {
   width: 100%;
-  /* height: 20rem; */
 }
 .mainScreenLink {
-  /* z-index: 2; */
   position: absolute;
   width: 20rem;
-  bottom: 1rem;
-  left: 2rem;
+  bottom: 3rem;
+  left: 5rem;
 }
 .secondContainer {
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr 1fr;
 }
