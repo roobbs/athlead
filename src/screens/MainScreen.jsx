@@ -2,8 +2,8 @@ import "../styles/MainScreen.css";
 import { Link } from "react-router-dom";
 import WhiteButton from "../components/WhiteButton";
 import all from "../images/all.jpg";
-import men from "../images/men.jpg";
-import women from "../images/women.jpg";
+import men from "../images/men.webp";
+import women from "../images/women.webp";
 
 export default function MainScreen() {
   return (
