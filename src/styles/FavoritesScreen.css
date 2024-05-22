@@ -17,3 +17,7 @@
   background-color: black;
   border: 2px solid black;
 }
+.noFavs {
+  font-size: large;
+  font-weight: 600;
+}

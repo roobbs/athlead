@@ -2,6 +2,7 @@ import { ShopContext } from "../App/App";
 import "../styles/AllProducts.css";
 import ProductCard from "../components/ProductCard";
 import { useContext } from "react";
+import { IoFilter } from "react-icons/io5";
 
 export default function AllProducts() {
   const { products } = useContext(ShopContext);
@@ -15,7 +16,7 @@ export default function AllProducts() {
             día, con la comodidad como prioridad. Conócelos ahora.{" "}
           </div>
         </div>
-        <div>filter</div>
+        <IoFilter size={40} className="filterIcon" />
       </div>
       <div className="productContainer">
         {products.map((product) => {

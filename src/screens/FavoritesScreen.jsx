@@ -16,20 +16,27 @@ export default function FavoritesScreen() {
           <WhiteButton text="Seguir Comprando" />
         </Link>
       </div>
-      <div className="favItemsContainer">
-        {favItems.map((product) => (
-          <ProductCard
-            key={product.id}
-            name={product.name}
-            price={product.price}
-            category={product.category}
-            label={product.label}
-            img={product.image}
-            product={product}
-            id={product.id}
-          />
-        ))}
-      </div>
+      {favItems.length > 0 && (
+        <div className="favItemsContainer">
+          {favItems.map((product) => (
+            <ProductCard
+              key={product.id}
+              name={product.name}
+              price={product.price}
+              category={product.category}
+              label={product.label}
+              img={product.image}
+              product={product}
+              id={product.id}
+            />
+          ))}
+        </div>
+      )}
+      {favItems.length === 0 && (
+        <div className="noFavs">
+          Aún no agregas ningun producto a tu lista de favoritos :(
+        </div>
+      )}
     </div>
   );
 }

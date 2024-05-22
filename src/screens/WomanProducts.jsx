@@ -2,6 +2,7 @@ import { ShopContext } from "../App/App";
 import "../styles/AllProducts.css";
 import ProductCard from "../components/ProductCard";
 import { useContext } from "react";
+import { IoFilter } from "react-icons/io5";
 
 export default function WomenProducts() {
   const { products } = useContext(ShopContext);
@@ -19,7 +20,7 @@ export default function WomenProducts() {
             paso que des por la ciudad
           </div>
         </div>
-        <div>filter</div>
+        <IoFilter size={40} className="filterIcon" />
       </div>
       <div className="productContainer">
         {filteredProducts.map((product) => {

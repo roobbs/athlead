@@ -3,12 +3,17 @@
   color: black;
   padding: 1rem 2rem;
 }
+
 .contentHeader {
   display: grid;
-  grid-template-columns: 3.9fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 5fr 1fr;
+  gap: 4rem;
   padding-bottom: 1rem;
   align-items: center;
+  padding-right: 3rem;
+}
+.filterIcon {
+  justify-self: self-end;
 }
 .contentTitle {
   font-size: 2rem;
