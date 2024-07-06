@@ -26,7 +26,7 @@ export default function Header() {
       <div className="header">
         <input type="checkbox" id="check" />
         <label htmlFor="check" className="headerMenuIcons">
-          <MdMenu className="menuIcon" size={40} />
+          <MdMenu className="menuIcon" size={50} />
         </label>
         <Link to="/" className="logoContainer">
           <img src={athlead} alt="logo" className="logo" />
@@ -36,7 +36,7 @@ export default function Header() {
             <Link to="/" className="logoContainer">
               <img src={athlead} alt="logo" className="logo" />
             </Link>
-            <IoClose className="closeIcon" size={40} />
+            <IoClose className="closeIcon" size={50} />
           </label>
           <ul className="headerLinks">
             <li className="links">

@@ -141,16 +141,16 @@ input:focus {
   .headerMenuIcons .menuIcon {
     display: inline-block;
   }
-  /* .headerMenuIcons .closeIcon {
-    display: none;
-  }
-  #check:checked ~ .headerMenuIcons .menuIcon {
-    display: none;
-  } */
   #check:checked ~ .menuContainer .headerMenuIcons {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+  }
+  .auxiliar-menu {
+    gap: 0.5rem;
+  }
+  .inputImg {
+    height: 2rem;
   }
 }

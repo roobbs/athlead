@@ -15,7 +15,7 @@ export default function Cart() {
   }
   return (
     <div className="cartContainer">
-      <img src={icon} alt="cart" className="cartIcon" />
+      <img src={icon} alt="cart" className="inputImg" />
       {cartItems.length > 0 && <div className="cartNum">{totalItems}</div>}
     </div>
   );
