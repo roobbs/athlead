@@ -46,3 +46,16 @@
 .footerDescription {
   /* padding: 4rem; */
 }
+
+@media screen and (max-width: 950px) {
+  .productContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .productContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
