@@ -7,6 +7,12 @@
   grid-template-columns: 1fr auto auto;
   gap: 2rem;
   padding: 0.5rem 3rem;
+  position: relative;
+}
+.menuContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .headerLinks {
   margin: 0;
@@ -89,4 +95,62 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#check {
+  display: none;
+}
+.headerMenuIcons {
+  width: fit-content;
+  cursor: pointer;
+  display: none;
+  align-self: center;
+}
+@media screen and (max-width: 992px) {
+  .menuContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: fit-content;
+    border-bottom-right-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #505050;
+    overflow: hidden;
+    transition: 0.5s ease;
+    z-index: 3;
+    padding: 2rem 0;
+  }
+  .input-wrapper {
+    display: none;
+  }
+  .headerLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  #check:checked ~ .menuContainer {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .headerMenuIcons,
+  .headerMenuIcons .menuIcon {
+    display: inline-block;
+  }
+  /* .headerMenuIcons .closeIcon {
+    display: none;
+  }
+  #check:checked ~ .headerMenuIcons .menuIcon {
+    display: none;
+  } */
+  #check:checked ~ .menuContainer .headerMenuIcons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
