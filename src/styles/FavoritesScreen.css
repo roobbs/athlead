@@ -4,9 +4,7 @@
   flex: 1;
   background-color: #f8f8f8;
   color: black;
-  /* display: grid; */
   gap: 2rem;
-  /* grid-template-columns: 3fr 2fr; */
   padding: 2.5rem;
 }
 .favTitleContainer {
@@ -17,7 +15,24 @@
   background-color: black;
   border: 2px solid black;
 }
+.favItemsContainer {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
 .noFavs {
   font-size: large;
   font-weight: 600;
+}
+
+@media screen and (max-width: 950px) {
+  .favItemsContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .favItemsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
 }
