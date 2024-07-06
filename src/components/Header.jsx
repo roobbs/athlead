@@ -10,6 +10,8 @@ import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { ShopContext } from "../App/App";
+import { MdMenu } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
 
 export default function Header() {
   const [inputValue, setInputValue] = useState("");
@@ -22,27 +24,37 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <Link to="/">
+        <input type="checkbox" id="check" />
+        <label htmlFor="check" className="headerMenuIcons">
+          <MdMenu className="menuIcon" size={40} />
+        </label>
+        <Link to="/" className="logoContainer">
           <img src={athlead} alt="logo" className="logo" />
         </Link>
-        <ul className="headerLinks">
-          <li className="links">
-            <Link to="all">
-              <div>CALZADO</div>
+        <div className="menuContainer">
+          <label htmlFor="check" className="headerMenuIcons">
+            <Link to="/" className="logoContainer">
+              <img src={athlead} alt="logo" className="logo" />
             </Link>
-          </li>
-          <li className="links">
-            <Link to="women">
-              <div>Mujer</div>
-            </Link>
-          </li>
-          <li className="links">
-            <Link to="men">
-              <div>Hombre</div>
-            </Link>
-          </li>
-        </ul>
-        <div className="auxiliar-menu">
+            <IoClose className="closeIcon" size={40} />
+          </label>
+          <ul className="headerLinks">
+            <li className="links">
+              <Link to="all">
+                <div>CALZADO</div>
+              </Link>
+            </li>
+            <li className="links">
+              <Link to="women">
+                <div>Mujer</div>
+              </Link>
+            </li>
+            <li className="links">
+              <Link to="men">
+                <div>Hombre</div>
+              </Link>
+            </li>
+          </ul>
           <div className="input-wrapper">
             <input
               type="text"
@@ -62,6 +74,9 @@ export default function Header() {
               <img src={searchImg} alt="img" className="inputImg" />
             )}
           </div>
+        </div>
+
+        <div className="auxiliar-menu">
           <div>
             <img src={userImg} alt="" className="inputImg" />
           </div>
