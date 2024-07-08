@@ -94,15 +94,15 @@ export default function ProductScreen() {
         </div>
         <div className="productScreenName">{selectedProduct.name}</div>
         <div className="productScreenPrice">${selectedProduct.price}</div>
-        <div className="productScreenContent">
-          <div className="productImagesContainer">
-            <img src={selectedProduct.images[0]} alt="productImage" />
-            <img src={selectedProduct.images[1]} alt="productImage" />
-            <img src={selectedProduct.images[2]} alt="productImage" />
-            <img src={selectedProduct.images[3]} alt="productImage" />
-          </div>
+
+        <div className="productImagesContainer">
+          <img src={selectedProduct.images[0]} alt="productImage" />
+          <img src={selectedProduct.images[1]} alt="productImage" />
+          <img src={selectedProduct.images[2]} alt="productImage" />
+          <img src={selectedProduct.images[3]} alt="productImage" />
         </div>
-        <div>{selectedProduct.label}</div>
+
+        <div className="productScreenLabel">{selectedProduct.label}</div>
         <div className="prodScreenButtonsContainer">
           <div className="cartPayButtonContainer">
             <div

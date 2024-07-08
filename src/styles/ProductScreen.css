@@ -108,10 +108,21 @@
     background-color: #f8f8f8;
     color: black;
   }
+  .productScreenCategory,
+  .productScreenName,
+  .productScreenPrice,
+  .productScreenLabel,
+  .prodScreenButtonsContainer,
+  .productScreenInfoContainer {
+    padding: 0 2rem;
+  }
+  .productImagesContainer {
+    margin: 1rem 0;
+  }
 }
 .productScreenContainerMobile {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
