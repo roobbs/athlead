@@ -1,0 +1,27 @@
+.imageSlider {
+  max-height: 50vw;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-color: rgb(0, 0, 0) transparent;
+  scrollbar-width: thin;
+}
+.imageSlider::-webkit-scrollbar-track {
+  color: black;
+}
+.imageSlider img {
+  width: 100%;
+  object-fit: contain;
+  scroll-snap-align: center;
+}
+@media screen and (max-width: 850px) {
+  .imageSlider {
+    flex-direction: row;
+    max-width: 100%;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: rgb(0, 0, 0) transparent;
+    scrollbar-width: auto;
+    max-height: 100%;
+  }
+}
