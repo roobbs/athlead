@@ -21,10 +21,10 @@
 }
 .footer1 ul .li {
   border-bottom: 1px solid transparent;
-  transition: border 0.4s;
+  transition: border 0.3s;
   cursor: pointer;
   font-size: 0.9rem;
-  width: fit-content;
+  width: max-content;
 }
 .footer1 ul .li:hover {
   border-bottom: 1px solid black;
