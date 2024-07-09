@@ -1,4 +1,5 @@
 .productScreenContainer {
+  max-width: 100vw;
   background-color: #f8f8f8;
   color: black;
   display: grid;
@@ -17,24 +18,6 @@
   flex-direction: column;
   gap: 1.5rem;
   border-right: 1px solid black;
-}
-.productImagesContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  border: 1px solid black;
-  border-right-color: transparent;
-}
-.productImagesContainer img {
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid transparent;
-  transition: transform 2s;
-}
-.productImagesContainer img:hover {
-  transform: scale(1.2);
-  border-color: rgb(159, 159, 159);
-  z-index: 2;
 }
 .productScreenSideBar {
   height: fit-content;
@@ -107,6 +90,9 @@
     flex-direction: column;
     background-color: #f8f8f8;
     color: black;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
   .productScreenCategory,
   .productScreenName,
@@ -116,13 +102,4 @@
   .productScreenInfoContainer {
     padding: 0 2rem;
   }
-  .productImagesContainer {
-    margin: 1rem 0;
-  }
-}
-.productScreenContainerMobile {
-  display: flex;
-  gap: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
 }
