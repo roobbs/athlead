@@ -8,6 +8,7 @@ import favIcon1 from "../assets/favorito1.png";
 import entrega from "../assets/entrega.png";
 import check from "../assets/check.png";
 import DisplayInfo from "../components/DisplayInfo";
+import ImageSlider from "../components/ImageSlider";
 
 export default function ProductScreen() {
   const { productId } = useParams();
@@ -25,12 +26,7 @@ export default function ProductScreen() {
     <>
       <div className="productScreenContainer">
         <div className="productScreenContent">
-          <div className="productImagesContainer">
-            <img src={selectedProduct.images[0]} alt="productImage" />
-            <img src={selectedProduct.images[1]} alt="productImage" />
-            <img src={selectedProduct.images[2]} alt="productImage" />
-            <img src={selectedProduct.images[3]} alt="productImage" />
-          </div>
+          <ImageSlider imagesArr={selectedProduct.images} />
           <div>
             <DisplayInfo title={"Descripcion"}>
               <h3>{selectedProduct.description[0]}</h3>
@@ -95,12 +91,7 @@ export default function ProductScreen() {
         <div className="productScreenName">{selectedProduct.name}</div>
         <div className="productScreenPrice">${selectedProduct.price}</div>
 
-        <div className="productImagesContainer">
-          <img src={selectedProduct.images[0]} alt="productImage" />
-          <img src={selectedProduct.images[1]} alt="productImage" />
-          <img src={selectedProduct.images[2]} alt="productImage" />
-          <img src={selectedProduct.images[3]} alt="productImage" />
-        </div>
+        <ImageSlider imagesArr={selectedProduct.images} />
 
         <div className="productScreenLabel">{selectedProduct.label}</div>
         <div className="prodScreenButtonsContainer">
