@@ -63,9 +63,18 @@
     flex-direction: column;
   }
   .footer1 ul {
+    width: 100%;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    justify-content: space-around;
+    /* grid-template-columns: auto auto; */
+    /* justify-items: center; */
   }
+  /* .footer1 ul li {
+    width: min-content;
+  } */
 }
