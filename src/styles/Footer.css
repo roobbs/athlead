@@ -1,8 +1,10 @@
 .footer1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   color: black;
+  gap: 3rem;
+  padding: 1rem 2rem;
 }
 .footerTitle {
   font-weight: 700;
@@ -38,16 +40,32 @@
   letter-spacing: 1px;
 }
 .ulConfig {
+  padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding-bottom: 1rem;
+  gap: 2rem;
 }
 .ulConfig li {
   list-style: none;
-  transition: border 0.4s;
-  border-right: 2px solid white;
+  transition: border 0.3s;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
   padding: 0rem 01.5rem;
 }
 .ulConfig li:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 730px) {
+  .footer1 {
+    flex-direction: column;
+  }
+  .footer1 ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
 }
