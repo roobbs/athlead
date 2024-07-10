@@ -4,6 +4,7 @@ import WhiteButton from "../components/WhiteButton";
 import all from "../images/all.webp";
 import men from "../images/samba.webp";
 import women from "../images/wom.webp";
+import sale from "../images/calzado.webp";
 import { IoClose } from "react-icons/io5";
 
 export default function MainScreen() {
@@ -22,13 +23,57 @@ export default function MainScreen() {
           <WhiteButton text="Ver todo el calzado" />
         </Link>
       </div>
-      {/* <div className="animationContainer">
-        <div className="animationTitle">🛒FINAL DE TEMPORADA 🛒</div>
-        <div>
-          Usa el código 🎫ATHLEAD15🎫 y obtén 15% OFF adicional en tus compras
-          de final de temporada
+      <div className="animationContainer">
+        {/* <div className="animations">
+          <div className="saleContainer animCont1">
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+          </div>
+          <div className="saleContainer animCont2">
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+          </div>
+        </div> */}
+
+        <div className="animationInfo">
+          <div className="animationTitle">🛒FINAL DE TEMPORADA 🛒</div>
+          <div>
+            Usa el código 🎫ATHLEAD15🎫 y obtén 15% OFF adicional en tus compras
+            de final de temporada
+          </div>
         </div>
-      </div> */}
+        <img src={sale} alt="" />
+        <div className="animationTitle">
+          Hasta <p className="off">60%</p> OFF
+        </div>
+
+        {/* <div className="animations">
+          <div className="saleContainer animCont1">
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+          </div>
+          <div className="saleContainer animCont2">
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+            <div>sale</div>
+          </div>
+        </div> */}
+      </div>
       <div className="secondContainer">
         <div className="container">
           <img src={women} alt="" className="mainPic" />

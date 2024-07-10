@@ -1,3 +1,9 @@
+:root {
+  --quantity: 2;
+  --seconds: 20s;
+  --icon-width: 110px;
+  --margin: 20px;
+}
 .mainScreenContainer {
   flex: 1;
   display: flex;
@@ -52,13 +58,69 @@
 label {
   display: flex;
 }
-/* .animationContainer {
+.animationContainer {
   background-color: rgb(255, 255, 80);
   text-align: center;
-  padding: 2rem 1rem;
+  position: relative;
+  font-size: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem;
+  height: 300px;
+}
+.animationInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .animationTitle {
   font-weight: 700;
+  align-self: center;
+  text-align: start;
+}
+.off {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+}
+/* .animations {
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+  position: relative;
+}
+.saleContainer {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: 100;
+  letter-spacing: 4px;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-around;
+  position: absolute;
+
+  animation: scroll var(--seconds) linear infinite;
+}
+.animCont1 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 1) * -1
+  ) !important;
+}
+.animCont2 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 2) * -1
+  ) !important;
+}
+@keyframes scroll {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(100vw * -1);
+  }
 } */
 @media screen and (max-width: 950px) {
   .secondContainer {
