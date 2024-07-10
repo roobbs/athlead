@@ -1,7 +1,7 @@
 import "../styles/MainScreen.css";
 import { Link } from "react-router-dom";
 import WhiteButton from "../components/WhiteButton";
-import all from "../images/all.jpg";
+import all from "../images/all.webp";
 import men from "../images/samba.webp";
 import women from "../images/wom.webp";
 
