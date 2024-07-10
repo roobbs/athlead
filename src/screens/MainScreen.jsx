@@ -24,24 +24,26 @@ export default function MainScreen() {
         </Link>
       </div>
       <div className="animationContainer">
-        {/* <div className="animations">
-          <div className="saleContainer animCont1">
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-          </div>
-          <div className="saleContainer animCont2">
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-            <div>sale</div>
-          </div>
-        </div> */}
+        <div className="saleTop sale1">sale</div>
+        <div className="saleTop sale2">sale</div>
+        <div className="saleTop sale3">sale</div>
+        <div className="saleTop sale4">sale</div>
+        <div className="saleTop sale5">sale</div>
+        <div className="saleTop sale6">sale</div>
+        <div className="saleTop sale7">sale</div>
+        <div className="saleTop sale8">sale</div>
+        <div className="saleTop sale9">sale</div>
+        <div className="saleTop sale10">sale</div>
+        <div className="saleBottom sale1">sale</div>
+        <div className="saleBottom sale2">sale</div>
+        <div className="saleBottom sale3">sale</div>
+        <div className="saleBottom sale4">sale</div>
+        <div className="saleBottom sale5">sale</div>
+        <div className="saleBottom sale6">sale</div>
+        <div className="saleBottom sale7">sale</div>
+        <div className="saleBottom sale8">sale</div>
+        <div className="saleBottom sale9">sale</div>
+        <div className="saleBottom sale10">sale</div>
 
         <div className="animationInfo">
           <div className="animationTitle">🛒FINAL DE TEMPORADA🛒</div>

@@ -1,7 +1,7 @@
 :root {
-  --quantity: 2;
-  --seconds: 20s;
-  --icon-width: 110px;
+  --quantity: 10;
+  --seconds: 25s;
+  --sale-width: 110px;
   --margin: 20px;
 }
 .mainScreenContainer {
@@ -59,7 +59,7 @@ label {
   display: flex;
 }
 .animationContainer {
-  background-color: rgb(255, 255, 80);
+  background-color: rgb(255, 240, 80);
   text-align: center;
   position: relative;
   font-size: 1.5rem;
@@ -81,40 +81,82 @@ label {
 }
 .animationDisccount {
   font-weight: 700;
+  align-self: center;
 }
 .off {
   font-size: 4rem;
   font-weight: 900;
   margin: 0;
 }
-/* .animations {
-  width: 100%;
-  height: 35px;
-  overflow: hidden;
-  position: relative;
-}
-.saleContainer {
+
+.saleTop,
+.saleBottom {
+  position: absolute;
   text-transform: uppercase;
   font-family: monospace;
   font-weight: 100;
   letter-spacing: 4px;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  width: 100%;
-  justify-content: space-around;
-  position: absolute;
-
+  background-color: rgba(255, 255, 255, 0.571);
+  backdrop-filter: blur(10px);
+  padding: 1px 10px;
+  z-index: 2;
+}
+.saleTop {
+  top: 0;
   animation: scroll var(--seconds) linear infinite;
 }
-.animCont1 {
+.saleBottom {
+  bottom: 0;
+  animation: reverseScroll var(--seconds) linear infinite;
+}
+.sale1 {
   animation-delay: calc(
     var(--seconds) / var(--quantity) * (var(--quantity) - 1) * -1
   ) !important;
 }
-.animCont2 {
+.sale2 {
   animation-delay: calc(
     var(--seconds) / var(--quantity) * (var(--quantity) - 2) * -1
+  ) !important;
+}
+.sale3 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 3) * -1
+  ) !important;
+}
+.sale4 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 4) * -1
+  ) !important;
+}
+.sale5 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 5) * -1
+  ) !important;
+}
+.sale6 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 6) * -1
+  ) !important;
+}
+.sale7 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 7) * -1
+  ) !important;
+}
+.sale8 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 8) * -1
+  ) !important;
+}
+.sale9 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 9) * -1
+  ) !important;
+}
+.sale10 {
+  animation-delay: calc(
+    var(--seconds) / var(--quantity) * (var(--quantity) - 10) * -1
   ) !important;
 }
 @keyframes scroll {
@@ -124,12 +166,21 @@ label {
   to {
     left: calc(100vw * -1);
   }
-} */
+}
+@keyframes reverseScroll {
+  from {
+    right: 100%;
+  }
+  to {
+    right: calc(100vw * -1);
+  }
+}
 @media screen and (max-width: 1000px) {
   .animationContainer {
     flex-direction: column;
     gap: 2rem;
     padding: 3rem 0;
+    padding-bottom: 5rem;
     height: min-content;
   }
   .animationContainer img {
@@ -138,7 +189,7 @@ label {
   }
   .animationDisccount {
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     translate: -50%;
     display: flex;
@@ -149,6 +200,14 @@ label {
     backdrop-filter: blur(4px);
     border-radius: 5px;
     border: 1px solid transparent;
+  }
+  :root {
+    --quantity: 8;
+    --seconds: 15s;
+  }
+  .sale9,
+  .sale10 {
+    display: none;
   }
 }
 @media screen and (max-width: 950px) {
@@ -163,5 +222,13 @@ label {
 @media screen and (max-width: 600px) {
   .container {
     height: 300px;
+  }
+  :root {
+    --quantity: 6;
+    --seconds: 10s;
+  }
+  .sale8,
+  .sale7 {
+    display: none;
   }
 }
