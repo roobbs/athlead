@@ -44,7 +44,7 @@ export default function MainScreen() {
         </div> */}
 
         <div className="animationInfo">
-          <div className="animationTitle">🛒FINAL DE TEMPORADA 🛒</div>
+          <div className="animationTitle">🛒FINAL DE TEMPORADA🛒</div>
           <div>
             Usa el código 🎫ATHLEAD15🎫 y obtén 15% OFF adicional en tus compras
             de final de temporada
