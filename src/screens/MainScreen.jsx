@@ -51,7 +51,7 @@ export default function MainScreen() {
           </div>
         </div>
         <img src={sale} alt="" />
-        <div className="animationTitle">
+        <div className="animationDisccount">
           Hasta <p className="off">60%</p> OFF
         </div>
 

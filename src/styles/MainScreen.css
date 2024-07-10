@@ -79,6 +79,9 @@ label {
   align-self: center;
   text-align: start;
 }
+.animationDisccount {
+  font-weight: 700;
+}
 .off {
   font-size: 4rem;
   font-weight: 900;
@@ -122,6 +125,33 @@ label {
     left: calc(100vw * -1);
   }
 } */
+@media screen and (max-width: 1000px) {
+  .animationContainer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 0;
+    height: min-content;
+  }
+  .animationContainer img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .animationDisccount {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    translate: -50%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* -webkit-text-stroke: 1px rgb(107, 107, 107); */
+    color: rgb(0, 0, 0);
+  }
+  .off {
+    -webkit-text-stroke: 1px rgb(146, 146, 146);
+    /* color: rgba(0, 0, 0, 0.714); */
+  }
+}
 @media screen and (max-width: 950px) {
   .secondContainer {
     display: flex;
