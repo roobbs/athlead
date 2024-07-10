@@ -144,12 +144,11 @@ label {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* -webkit-text-stroke: 1px rgb(107, 107, 107); */
-    color: rgb(0, 0, 0);
-  }
-  .off {
-    -webkit-text-stroke: 1px rgb(146, 146, 146);
-    /* color: rgba(0, 0, 0, 0.714); */
+    padding: 0 1rem;
+    background-color: rgba(255, 255, 255, 0.552);
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    border: 1px solid transparent;
   }
 }
 @media screen and (max-width: 950px) {
