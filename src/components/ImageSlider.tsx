@@ -1,6 +1,10 @@
 import "../styles/ImageSlider.css";
 
-export default function ImageSlider({ imagesArr }) {
+interface ImageSliderProps {
+  imagesArr: string[];
+}
+
+export default function ImageSlider({ imagesArr }: ImageSliderProps) {
   return (
     <section className="imageSlider">
       <img src={imagesArr[0]} alt="productImage" />
