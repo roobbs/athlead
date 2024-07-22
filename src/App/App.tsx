@@ -1,13 +1,19 @@
 import "./App.css";
 import { useState, createContext, useEffect } from "react";
-import productsList from "../../products.js";
+import productsList from "../../products.ts";
 import Router from "../Router.jsx";
 
 interface Product {
-  id: number;
+  id: string;
   name: string;
-  price: number;
-  quantity?: number;
+  price: string;
+  category: string;
+  label: string;
+  image: string;
+  images: string[];
+  description: string[];
+  specifications: string[];
+  quantity?: number | undefined;
 }
 
 interface ShopContextType {
