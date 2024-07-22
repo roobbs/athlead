@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import up from "../assets/arriba.png";
 import down from "../assets/abajo.png";
 import "../styles/DisplayInfo.css";
 
-export default function DisplayInfo({ title, children }) {
+interface DisplayInfoProps {
+  title: string;
+  children: ReactNode;
+}
+
+export default function DisplayInfo({ title, children }: DisplayInfoProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
