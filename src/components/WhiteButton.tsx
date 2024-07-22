@@ -1,7 +1,11 @@
 import arrow from "../assets/right-arrow.png";
 import "../styles/WhiteButton.css";
 
-export default function WhiteButton({ text }) {
+interface WhiteButtonProps {
+  text: string;
+}
+
+export default function WhiteButton({ text }: WhiteButtonProps) {
   return (
     <div className="whiteButtonContainer">
       <div className="whiteButton">
