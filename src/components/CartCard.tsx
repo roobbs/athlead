@@ -5,8 +5,22 @@ import "../styles/CartCard.css";
 import { useContext, useState, useEffect } from "react";
 import { ShopContext } from "../App/App";
 
-export default function CartCard({ img, name, price, category, product }) {
-  const [isFav, setIsFav] = useState();
+interface CartCardProps {
+  img: string;
+  name: string;
+  price: string;
+  category: string;
+  product: any;
+}
+
+export default function CartCard({
+  img,
+  name,
+  price,
+  category,
+  product,
+}: CartCardProps) {
+  const [isFav, setIsFav] = useState<boolean>(false);
   const { favItems, eraseFromCart, addToFav, eraseFav, changeQuantity } =
     useContext(ShopContext);
 
