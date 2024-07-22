@@ -1,4 +1,3 @@
-import gazelle from "./src/images/gazelle.jpg";
 import gazBlue1 from "./src/images/gaz-blue1.jpg";
 import gazBlue2 from "./src/images/gaz-blue2.jpg";
 import gazBlue3 from "./src/images/gaz-blue3.jpg";
