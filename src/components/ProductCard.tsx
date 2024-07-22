@@ -5,6 +5,16 @@ import { useState, useContext, useEffect } from "react";
 import { ShopContext } from "../App/App";
 import { Link } from "react-router-dom";
 
+interface ProductCardProps {
+  img: string;
+  name: string;
+  price: string;
+  category: string;
+  label: string;
+  product: any;
+  id: string | number;
+}
+
 export default function ProductCard({
   img,
   name,
@@ -13,8 +23,8 @@ export default function ProductCard({
   label,
   product,
   id,
-}) {
-  const [isFav, setIsFav] = useState();
+}: ProductCardProps) {
+  const [isFav, setIsFav] = useState<boolean>(false);
   const { favItems, addToFav, eraseFav } = useContext(ShopContext);
 
   useEffect(() => {
