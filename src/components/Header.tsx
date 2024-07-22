@@ -14,10 +14,10 @@ import { MdMenu } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
 
 export default function Header() {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>("");
   const { favItems } = useContext(ShopContext);
 
-  function handleSearch(event) {
+  function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
     setInputValue(event.target.value);
   }
 
