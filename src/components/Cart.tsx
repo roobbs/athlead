@@ -9,6 +9,7 @@ export default function Cart() {
   let totalItems = 0;
   if (cartItems.length > 0) {
     cartItems.map((item) => {
+      if (!item.quantity) item.quantity = 1;
       totalItems += item.quantity;
       console.log(totalItems);
     });
