@@ -7,16 +7,22 @@ import favIcon from "../assets/favorito.png";
 import favIcon1 from "../assets/favorito1.png";
 import entrega from "../assets/entrega.png";
 import check from "../assets/check.png";
-import DisplayInfo from "../components/DisplayInfo";
-import ImageSlider from "../components/ImageSlider";
+import DisplayInfo from "../components/DisplayInfo.tsx";
+import ImageSlider from "../components/ImageSlider.tsx";
+
+type ProductParams = Record<string, string | undefined>;
 
 export default function ProductScreen() {
-  const { productId } = useParams();
+  const { productId } = useParams<ProductParams>();
   const { products, favItems, addToFav, eraseFav, addToCart } =
     useContext(ShopContext);
-  const [isFav, setIsFav] = useState(false);
+  const [isFav, setIsFav] = useState<boolean>(false);
 
   const selectedProduct = products.find((prod) => prod.id === productId);
+
+  if (!selectedProduct) {
+    return <div>Producto no encontrado</div>;
+  }
 
   useEffect(() => {
     setIsFav(favItems.includes(selectedProduct));
