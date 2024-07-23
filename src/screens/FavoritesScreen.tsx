@@ -1,9 +1,9 @@
 import "../styles/FavoritesScreen.css";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/ProductCard.tsx";
 import { ShopContext } from "../App/App";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import WhiteButton from "../components/WhiteButton";
+import WhiteButton from "../components/WhiteButton.tsx";
 
 export default function FavoritesScreen() {
   const { favItems } = useContext(ShopContext);
