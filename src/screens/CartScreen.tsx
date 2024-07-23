@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import "../styles/CartScreen.css";
 import { useContext } from "react";
 import { ShopContext } from "../App/App";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/ProductCard.tsx";
 import CartCard from "../components/CartCard";
 import arrow from "../assets/right-arrow.png";
-import WhiteButton from "../components/WhiteButton";
+import WhiteButton from "../components/WhiteButton.tsx";
 import { RiMastercardLine } from "react-icons/ri";
 import { RiVisaLine } from "react-icons/ri";
 import { BsCreditCard } from "react-icons/bs";
@@ -15,13 +15,18 @@ export default function CartScreen() {
   const { cartItems, favItems } = useContext(ShopContext);
   let totalPayment = 0;
   cartItems.map((item) => {
-    const price = item.price * item.quantity;
+    let price = Number(item.price);
+    if (item.quantity !== undefined) {
+      price = Number(item.price) * item.quantity;
+    }
     totalPayment += price;
   });
   let totalItems = 0;
   if (cartItems.length > 0) {
     cartItems.map((item) => {
-      totalItems += item.quantity;
+      if (item.quantity !== undefined) {
+        totalItems += item.quantity;
+      }
       console.log(totalItems);
     });
   }
