@@ -1,6 +1,6 @@
 import { ShopContext } from "../App/App";
 import "../styles/AllProducts.css";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/ProductCard.tsx";
 import { useContext } from "react";
 import { IoFilter } from "react-icons/io5";
 
